@@ -5,16 +5,7 @@ const capthaInput = '42812249899758728399611695139795793356913694984837941712536
 const result =
   capthaInput
     .split('')
-    .reduce((acc, curr, index, arr) => {
-      const last = arr[index - 1];
-      const sameAsLast = curr === last;
-      const isLastItem = (arr.length - 1) === index;
-
-      if (isLastItem) {
-        const firstItem = arr[0];
-        return firstItem === curr ? acc + Number(curr) : acc;
-      }
-      return sameAsLast ? acc + Number(curr) : acc;
-    }, 0);
+    .reduce((acc, curr, index, arr) =>
+      curr === arr[(arr.length / 2) + index] ? acc + (Number(curr) * 2) : acc, 0);
 
 console.log(result)
