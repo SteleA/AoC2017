@@ -1,0 +1,14 @@
+{
+  "name": "AoC_2017",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SteleA/AoC2017.git",
+  "author": "Alex Stelea",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "jest --watch"
+  }
+}
